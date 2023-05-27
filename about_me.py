@@ -9,9 +9,9 @@ def main():
     # Step 2: Create a complex data structure that holds information about me
     about_me = {
         # TODO: Put full name into data structure
-        'name': 'MRunal Hitenbhai Patel',
+        'name': 'Mrunal Hitenbhai Patel',
         # TODO: Put student ID into data structure
-        'stuent ID': '10298335',
+        'student ID': 10298335,
         # TODO: Put list of 3 pizza toppings into data structure
         'pizaa toppings': [
             'PINEAPPLE',
@@ -61,9 +61,11 @@ def print_student_name_and_id(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 3
+    first_name = my_info['name'].split()[0]
     # Print sentence containing name
+    print(f"My name is {my_info['name']}, but you can call me Sir {first_name}.")
     # Print sentence containing student ID
-    print()
+    print(f"My student ID is {my_info['student ID']}.")
 
 def print_pizza_toppings(my_info):
     """Prints a bullet list of favourite pizza toppings
