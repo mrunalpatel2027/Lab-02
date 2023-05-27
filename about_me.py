@@ -42,7 +42,7 @@ def main():
 
     # Step 5: Add pizza toppings to the data structure
     # TODO: Change to pizza toppings you like
-    add_pizza_toppings(about_me, ['extra chesse', 'vegies'])
+    add_pizza_toppings(about_me, ['extra chesse', 'vegies','tomatoes'])
     print_pizza_toppings(about_me)
 
     # Step 6: Add another movie to the data structure
@@ -66,7 +66,7 @@ def print_student_name_and_id(my_info):
     # Print sentence containing name
     print(f"My name is {my_info['name']}, but you can call me Sir {my_info['first_name']}.")
     # Print sentence containing student ID
-    print(f"My student ID is {my_info['student ID']}.")
+    print(f"My student ID is {my_info['student ID']}.\n")
 
 def print_pizza_toppings(my_info):
     """Prints a bullet list of favourite pizza toppings
@@ -78,9 +78,14 @@ def print_pizza_toppings(my_info):
     
     # Print header "My favourite pizza toppings are:"
     print("My favourite pizza toppings are:")
+
     # Print bullet list of favourite pizza toppings
     for pizza_toppings in my_info['pizza toppings']:
         print(f'- {pizza_toppings}')
+        
+    # new empty space
+    print()
+        
  
 def add_pizza_toppings(my_info, toppings):
     """Adds some pizza toppings to the list of favourites
@@ -91,9 +96,17 @@ def add_pizza_toppings(my_info, toppings):
     """
     # TODO: Complete function body per Step 5
     # Append new pizza toppings to end of list 
+    my_info['pizza toppings'].extend(toppings)
+
     # Convert all pizza toppings to lowercase
+    for i, pizza_toppings in enumerate(my_info['pizza toppings']):
+        my_info['pizza toppings'][i] = pizza_toppings.lower()
     # Sort toppings list alphabetically
+    my_info['pizza toppings'].sort()
     return
+    
+    print_pizza_toppings(my_info)
+
 
 def add_movie(my_info, title, genre):
     """Adds a movie to the list of favourites
