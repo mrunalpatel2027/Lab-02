@@ -10,10 +10,11 @@ def main():
     about_me = {
         # TODO: Put full name into data structure
         'name': 'Mrunal Hitenbhai Patel',
+        'first_name': 'Mrunal',
         # TODO: Put student ID into data structure
         'student ID': 10298335,
         # TODO: Put list of 3 pizza toppings into data structure
-        'pizaa toppings': [
+        'pizza toppings': [
             'PINEAPPLE',
             'SAUSAGE',
             'PEPPERONI'
@@ -41,7 +42,7 @@ def main():
 
     # Step 5: Add pizza toppings to the data structure
     # TODO: Change to pizza toppings you like
-    add_pizza_toppings(about_me, ['soylent green', 'racht'])
+    add_pizza_toppings(about_me, ['extra chesse', 'vegies'])
     print_pizza_toppings(about_me)
 
     # Step 6: Add another movie to the data structure
@@ -61,9 +62,9 @@ def print_student_name_and_id(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 3
-    first_name = my_info['name'].split()[0]
+  
     # Print sentence containing name
-    print(f"My name is {my_info['name']}, but you can call me Sir {first_name}.")
+    print(f"My name is {my_info['name']}, but you can call me Sir {my_info['first_name']}.")
     # Print sentence containing student ID
     print(f"My student ID is {my_info['student ID']}.")
 
@@ -74,10 +75,13 @@ def print_pizza_toppings(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 4
+    
     # Print header "My favourite pizza toppings are:"
+    print("My favourite pizza toppings are:")
     # Print bullet list of favourite pizza toppings
-    print()
-
+    for pizza_toppings in my_info['pizza toppings']:
+        print(f'- {pizza_toppings}')
+ 
 def add_pizza_toppings(my_info, toppings):
     """Adds some pizza toppings to the list of favourites
 
