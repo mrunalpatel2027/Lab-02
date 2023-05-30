@@ -47,7 +47,7 @@ def main():
 
     # Step 6: Add another movie to the data structure
     # TODO: Change to a movie you like
-    add_movie(about_me, 'the lord of the rings', 'fantasy')
+    add_movie(about_me, 'The fate of the furious', 'action')
 
     # Step 7: Print a comma-separated list of movie genres
     print_movie_genres(about_me)
@@ -119,8 +119,8 @@ def add_movie(my_info, title, genre):
     # TODO: Complete function body per Step 6
     # Create dictionary for new movie and add to movie list
     new_movie = {
-        'title': 'The Fast and furious 9',
-        'genre': 'action'
+        'title': 'Bahubali 2',
+        'genre': 'drama'
     }
     my_info['movies'].append(new_movie)
     return
@@ -131,8 +131,12 @@ def print_movie_genres(my_info):
     Args:
         my_info (dict): Data structure containing information about me
     """
+    print("I like to watch ",end='')
     # TODO: Complete function body per Step 7
-    print()
+    movie_genres = [movies['genre'] for movies in my_info['movies']]
+    
+    print(', '.join(movie_genres) , end=  ' movies.')
+    
 
 def print_movie_titles(movie_list):
     """Prints a sentence listing all favourite movie titles
