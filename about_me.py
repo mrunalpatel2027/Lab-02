@@ -136,6 +136,7 @@ def print_movie_genres(my_info):
     movie_genres = [movies['genre'] for movies in my_info['movies']]
     
     print(', '.join(movie_genres) , end=  ' movies.')
+    print()
     
 
 def print_movie_titles(movie_list):
@@ -145,7 +146,11 @@ def print_movie_titles(movie_list):
         movie_list (list): List of favourite movies
     """
     # TODO: Complete function body per Step 8
-    print()
+    print("\nSome of my favourite movies are ",end='')
+    movie_title = [movies['title'] for movies in movie_list]
+    
+    print(', '.join(movie_title) , end= '!')
+  
 
 if __name__ == '__main__':
     main()
