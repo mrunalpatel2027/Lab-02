@@ -22,12 +22,12 @@ def main():
         'movies': [
             # TODO: Change this to a movie you like
             {
-                'title': 'The Fast X',
+                'title': 'the fast x',
                 'genre': 'action'
             },
              # TODO: Add one more movie
              {
-                'title': 'Dhammal',
+                'title': 'dhammal',
                 'genre': 'comedy'
             },
            
@@ -119,7 +119,7 @@ def add_movie(my_info, title, genre):
     # TODO: Complete function body per Step 6
     # Create dictionary for new movie and add to movie list
     new_movie = {
-        'title': 'Bahubali 2',
+        'title': 'bahubali 2',
         'genre': 'drama'
     }
     my_info['movies'].append(new_movie)
@@ -149,7 +149,8 @@ def print_movie_titles(movie_list):
     print("\nSome of my favourite movies are ",end='')
     movie_title = [movies['title'] for movies in movie_list]
     
-    print(', '.join(movie_title) , end= '!')
+    print(', '.join(movie_title).title(), end= '!')
+    
   
 
 if __name__ == '__main__':
