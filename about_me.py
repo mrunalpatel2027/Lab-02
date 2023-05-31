@@ -66,7 +66,7 @@ def print_student_name_and_id(my_info):
     # Print sentence containing name
     print(f"My name is {my_info['name']}, but you can call me Sir {my_info['first_name']}.")
     # Print sentence containing student ID
-    print(f"My student ID is {my_info['student ID']}.\n")
+    print(f"My student ID is {my_info['student ID']}.")
 
 def print_pizza_toppings(my_info):
     """Prints a bullet list of favourite pizza toppings
@@ -77,14 +77,14 @@ def print_pizza_toppings(my_info):
     # TODO: Complete function body per Step 4
     
     # Print header "My favourite pizza toppings are:"
-    print("My favourite pizza toppings are:")
+    print("\nMy favourite pizza toppings are:")
 
     # Print bullet list of favourite pizza toppings
     for pizza_toppings in my_info['pizza toppings']:
         print(f'- {pizza_toppings}')
         
     # new empty space
-    print()
+    
         
  
 def add_pizza_toppings(my_info, toppings):
@@ -131,12 +131,12 @@ def print_movie_genres(my_info):
     Args:
         my_info (dict): Data structure containing information about me
     """
-    print("I like to watch ",end='')
+    print("\nI like to watch ",end='')
     # TODO: Complete function body per Step 7
     movie_genres = [movies['genre'] for movies in my_info['movies']]
     
     print(', '.join(movie_genres) , end=  ' movies.')
-    print()
+    
     
 
 def print_movie_titles(movie_list):
@@ -146,7 +146,7 @@ def print_movie_titles(movie_list):
         movie_list (list): List of favourite movies
     """
     # TODO: Complete function body per Step 8
-    print("\nSome of my favourite movies are ",end='')
+    print("\n\nSome of my favourite movies are ",end='')
     movie_title = [movies['title'] for movies in movie_list]
     
     print(', '.join(movie_title).title(), end= '!')
